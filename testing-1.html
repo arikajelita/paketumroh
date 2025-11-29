@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paket Outbound Rafting Petualang</title>
+    <link href="assets/img/logo 1.webp" rel="icon">
+    <link href="assets/img/logo 1.webp" rel="apple-touch-icon">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+    <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    /* Pengaturan Dasar Halaman */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      overflow: hidden;
+      padding: 0 20px;
+    }
+
+    /* --- STYLES UNTUK NAVBAR BARU --- */
+    .header-custom {
+      background: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar-container .logo img {
+      height: 40px;
+      display: block;
+    }
+
+    .navbar-custom ul li.dropdown ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      padding: 0.5rem 0;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      z-index: 100;
+    }
+
+    .navbar-custom ul li.dropdown:hover>ul {
+      display: block;
+    }
+
+    .navbar-custom ul li.dropdown ul li {
+      width: 100%;
+    }
+
+    .navbar-custom ul li.dropdown ul li a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: #333;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .navbar-custom ul li.dropdown ul li a:hover {
+      background-color: #f2f2f2;
+    }
+
+    .navbar-custom ul li.dropdown {
+      position: relative;
+    }
+
+    .navbar-custom nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .navbar-custom nav ul li {
+      position: relative;
+    }
+
+    .navbar-custom nav ul a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      padding-bottom: 5px;
+    }
+
+    .navbar-custom nav ul a.active,
+    .navbar-custom nav ul a:hover {
+      color: #e86121;
+    }
+
+    .dropdown>a::after {
+      content: ' ▾';
+      font-size: 0.8em;
+    }
+
+    .btn-tanya {
+      background-color: #e86121;
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-tanya:hover {
+      background-color: #d35400;
+      color: #fff;
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    .hamburger-menu {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 992px) {
+      .navbar-custom nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+      }
+
+      .navbar-custom nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      .dropdown ul {
+        position: static;
+        box-shadow: none;
+        border-top: 1px solid #eee;
+        margin-top: 10px;
+      }
+
+      .hamburger-menu {
+        display: block;
+      }
+
+      #menu-toggle:checked~.navbar-custom nav ul {
+        display: flex;
+      }
+
+      .btn-tanya {
+        display: none;
+      }
+    }
+
+    .page-header {
+      background: #005f73;
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+      border-bottom: #0a9396 4px solid;
+    }
+
+    .page-header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    .page-header p {
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    #paket-section {
+      padding: 40px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #005f73;
+    }
+
+    .paket-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .paket-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .paket-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .paket-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .paket-content {
+      padding: 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .paket-content h3 {
+      margin-top: 0;
+      color: #0a9396;
+      font-size: 1.5rem;
+    }
+
+    .paket-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      flex-grow: 1;
+    }
+
+    .paket-content ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+    }
+
+    .paket-content ul li::before {
+      content: '✔';
+      color: #2a9d8f;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .harga {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ee9b00;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .harga span {
+      font-size: 1rem;
+      font-weight: normal;
+      color: #555;
+    }
+
+    .btn-pesan {
+      display: block;
+      width: 80%;
+      padding: 12px;
+      background-color: #ee9b00;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin: auto auto 0 auto;
+    }
+
+    .btn-pesan:hover {
+      background-color: #ca6702;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header-custom">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">
+        <img src="assets/img/logo 1.webp" alt="Logo PaketOutbound.biz.id">
+      </a>
+
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </label>
+
+      <div class="navbar-custom">
+        <nav>
+          <ul>
+            <li><a href="index.html" class="active">Beranda</a></li>
+            <li><a href="index.html#about">Tentang</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="index.html#chefs">Outbound</a></li>
+            <li><a href="index.html#event">Events</a></li>
+            <li class="dropdown">
+              <a href="index.html">Paket</a>
+              <ul>
+                <li><a href="Paket-Outbound-Rafting.html">Paket Rafting</a></li>
+                <li><a href="paket-paintball.html">Paket Paintball</a></li>
+                <li><a href="paket-building.html">Paket Building</a></li>
+                <li><a href="paket-offroad.html">Paket Offroad</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="blog.html">Blog</a>
+              <ul>
+                <li><a href="Artikel-Rafting.html">Artikel Rafting</a></li>
+                <li><a href="blog-paintball.html">Artikel Paintball</a></li>
+                <li><a href="blog-building.html">Artikel Building</a></li>
+                <li><a href="blog-offroad.html">Artikel Offroad</a></li>
+              </ul>
+            </li>
+            <li><a href="kontak.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <a href="https://wa.me/62895639068080" class="btn-tanya" target="_blank">Tanya</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <h1>Paket Outbound Rafting Seru!</h1>
+        <p>Taklukkan Jeram dan Rasakan Adrenalin di Sungai Petualang</p>
+      </div>
+    </div>
+
+    <section id="paket-section" class="container">
+      <h2 class="section-title">Pilih Paket Petualangan Anda</h2>
+
+      <div class="paket-container">
+
+        <div class="paket-card">
+          <img src="assets/img/restaurant/rafting1.webp" alt="Tim sedang rafting">
+          <div class="paket-content">
+            <h3>Paket Silver</h3>
+            <ul>
+              <li>Durasi Rafting 1.5 Jam (7 KM)</li>
+              <li>Peralatan Standar Internasional</li>
+              <li>Pemandu Profesional</li>
+              <li>Asuransi Keselamatan</li>
+              <li>Kelapa Muda & Snack</li>
+            </ul>
+            <div class="harga">Rp 250.000 <span>/ pax</span></div>
+            <a href="https://wa.me/62895639068080?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Silver%20Rafting."
+              class="btn-pesan" target="_blank">Pesan Sekarang</a>
+          </div>
+        </div>
+
+        <div class="paket-card">
+          <img src="assets/img/restaurant/rafting2.webp" alt="Kegiatan outbound seru">
+          <div class="paket-content">
+            <h3>Paket Gold</h3>
+            <ul>
+              <li>Durasi Rafting 2.5 Jam (12 KM)</li>
+              <li>Peralatan Standar Internasional</li>
+              <li>Pemandu Profesional</li>
+              <li>Asuransi Keselamatan</li>
+              <li>Makan Siang (Prasmanan)</li>
+              <li>Dokumentasi Foto</li>
+            </ul>
+            <div class="harga">Rp 350.000 <span>/ pax</span></div>
+            <a href="https://wa.me/62895639068080?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Gold%20Rafting."
+              class="btn-pesan" target="_blank">Pesan Sekarang</a>
+          </div>
+        </div>
+
+        <div class="paket-card">
+          <img src="assets/img/restaurant/rafting bawah1.webp" alt="Kegiatan rafting yang menantang">
+          <div class="paket-content">
+            <h3>Paket Platinum</h3>
+            <ul>
+              <li>Durasi Rafting 2.5 Jam (12 KM)</li>
+              <li>Peralatan Standar Internasional</li>
+              <li>Pemandu Profesional</li>
+              <li>Asuransi Keselamatan</li>
+              <li>Makan Siang & Welcome Drink</li>
+              <li>Dokumentasi Foto & Video Drone</li>
+              <li>Fun Games & Team Building</li>
+            </ul>
+            <div class="harga">Rp 475.000 <span>/ pax</span></div>
+            <a href="https://wa.me/62895639068080?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Platinum%20Rafting."
+              class="btn-pesan" target="_blank">Pesan Sekarang</a>
+          </div>
+        </div>
+
+        <div class="paket-card">
+          <img src="assets/img/restaurant/rafting4.webp" alt="Paket rafting untuk keluarga">
+          <div class="paket-content">
+            <h3>Paket Family Fun</h3>
+            <ul>
+              <li>Durasi Rafting 1 Jam (5 KM - Jalur Aman)</li>
+              <li>Peralatan Khusus Anak & Dewasa</li>
+              <li>Pemandu Ramah Keluarga</li>
+              <li>Asuransi Keselamatan</li>
+              <li>Makan Siang & Es Krim</li>
+              <li>Area Piknik Keluarga</li>
+            </ul>
+            <div class="harga">Rp 225.000 <span>/ pax</span></div>
+            <a href="https://wa.me/62895639068080?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Family%20Fun%20Rafting."
+              class="btn-pesan" target="_blank">Pesan Sekarang</a>
+          </div>
+        </div>
+
+        <div class="paket-card">
+          <img src="assets/img/restaurant/rafting 5.webp" alt="Paket rafting untuk perusahaan">
+          <div class="paket-content">
+            <h3>Paket Corporate</h3>
+            <ul>
+              <li>Rafting & Team Building (12 KM)</li>
+              <li>Fasilitator Games Profesional</li>
+              <li>Peralatan Standar Internasional</li>
+              <li>Asuransi Keselamatan</li>
+              <li>Coffee Break & Makan Siang</li>
+              <li>Spanduk & Dokumentasi Video</li>
+              <li>Aula Meeting (Opsional)</li>
+            </ul>
+            <div class="harga">Rp 450.000 <span>/ pax</span></div>
+            <a href="https://wa.me/62895639068080?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Corporate%20Rafting."
+              class="btn-pesan" target="_blank">Pesan Sekarang</a>
+          </div>
+        </div>
+
+        <div class="paket-card">
+          <img src="assets/img/restaurant/rafting bawah2.webp" alt="Paket rafting jalur ekstrem">
+          <div class="paket-content">
+            <h3>Paket Adrenaline</h3>
+            <ul>
+              <li>Durasi Rafting 3 Jam (15 KM - Jalur Ekstrem)</li>
+              <li>Peralatan Keamanan Ekstra</li>
+              <li>Pemandu Ahli Jeram Ganas</li>
+              <li>Asuransi Keselamatan Plus</li>
+              <li>Makan Siang & Minuman Energi</li>
+              <li>GoPro di Setiap Perahu</li>
+              <li>Sertifikat Penakluk Jeram</li>
+            </ul>
+            <div class="harga">Rp 550.000 <span>/ pax</span></div>
+            <a href="https://wa.me/62895639068080?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Adrenaline%20Rafting."
+              class="btn-pesan" target="_blank">Pesan Sekarang</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">paketoutbound.biz.id</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Batu , Malang</p>
+            <p>Malang</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>0895-6390-68080</span></p>
+            <p><strong>Email:</strong> <span>outboundmalang@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links ms-lg-auto">
+          <h4>Link Berguna</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#chefs">Outbound</a></li>
+            <li><a href="#events">Events</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Paket Outbound</h4>
+          <ul>
+            <li><a href="Paket-Outbound-Rafting.html">Paket Rafting</a></li>
+            <li><a href="#">Paket Paintball</a></li>
+            <li><a href="#">Paket Building</a></li>
+            <li><a href="#">Paket Offroad</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Blog</h4>
+          <ul>
+            <li><a href="#">Artikel Rafting</a></li>
+            <li><a href="#">Artikel Paintball</a></li>
+            <li><a href="#">Artikel Building</a></li>
+            <li><a href="#">Artikel Offroad</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename"></strong>paketoutbound.biz.id<span>All Rights
+          Reserved</span></p>
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>

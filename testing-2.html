@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>paketoutbound.biz.id</title>
+    <meta name="description"
+        content="Penyedia jasa outbound, team building, dan gathering profesional. Kami siap merancang acara seru dan berkesan untuk perusahaan atau komunitas Anda.">
+    <meta name="keywords" content="Paket Outbound,Jasa Outbound,Team Building,Employee Gathering">
+
+    <link href="assets/img/logo 1.webp" rel="icon">
+    <link href="assets/img/logo 1.webp" rel="apple-touch-icon">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+        /* Custom CSS for Feature Cards in About Section */
+        #about .feature-card {
+            background-color: #D97E4A;
+            /* Warna oranye yang selaras dengan tema website */
+            border-radius: 8px;
+            padding: 30px;
+            color: #ffffff;
+            /* Mengubah warna teks paragraf menjadi putih */
+            transition: all 0.3s ease-in-out;
+            height: 100%;
+        }
+
+        /* Memberi efek saat kursor diarahkan ke kotak */
+        #about .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mengubah warna ikon dan judul agar kontras dengan latar belakang */
+        #about .feature-card .feature-icon i,
+        #about .feature-card h4 {
+            color: #ffffff;
+        }
+
+        /* Penambahan CSS untuk memberi jarak atas pada grid fitur */
+        .features-grid {
+            margin-top: 60px;
+        }
+
+        /* === CSS BARU UNTUK KARTU TIKET (Early Bird, Regular, dll.) === */
+        #tickets .ticket-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #tickets .ticket-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        #tickets .ticket-card .ticket-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #tickets .ticket-card h4 {
+            font-weight: 700;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        #tickets .ticket-card .price-section {
+            font-size: 48px;
+            font-weight: 700;
+            color: #D97E4A;
+            margin: 20px 0;
+        }
+
+        #tickets .ticket-card .price-section .currency {
+            font-size: 24px;
+            vertical-align: super;
+        }
+
+        #tickets .ticket-card .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        #tickets .ticket-card .benefits-list li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        #tickets .ticket-card .benefits-list i {
+            color: #28a745;
+            margin-right: 8px;
+        }
+
+        #tickets .ticket-card .benefits-list li i.bi-x {
+            color: #dc3545;
+        }
+
+
+        #tickets .ticket-card .ticket-btn {
+            background-color: #D97E4A;
+            color: #fff;
+            border-radius: 50px;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            margin-top: auto;
+            /* Mendorong tombol ke bawah */
+        }
+
+        #tickets .ticket-card .ticket-btn:hover {
+            background-color: #c86e3a;
+        }
+
+        /* Style khusus untuk kartu 'Regular' yang paling menonjol */
+        #tickets .ticket-card.premium {
+            background-color: #D97E4A;
+            color: #fff;
+        }
+
+        #tickets .ticket-card.premium h4,
+        #tickets .ticket-card.premium .price-section {
+            color: #fff;
+        }
+
+        #tickets .ticket-card.premium .benefits-list li {
+            color: #f1f1f1;
+        }
+
+        #tickets .ticket-card.premium .ticket-btn {
+            background-color: #fff;
+            color: #D97E4A;
+        }
+
+        #tickets .ticket-card.premium .ticket-btn:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <img src="assets/img/logo 1.webp" alt="Logo PaketOutbound.biz.id">
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="#hero" class="active">Beranda</a></li>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#gallery">gallery</a></li>
+                    <li><a href="#chefs">Outbound</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li class="dropdown"><a href="#hero"><span>Paket</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="Paket-Outbound-Rafting.html">Paket Outbound Rafting</a></li>
+
+                            <li><a href="#">Paket Outbound Panitball</a></li>
+                            <li><a href="#">Paket Outbound Building</a></li>
+                            <li><a href="#">Paket Outbound Offroad</a></li>
+                        </ul>
+                    <li class="dropdown"><a href="#"><span>Blog</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="#">Artikel Rafting</a></li>
+
+                            <li><a href="#">Artikel Paintball</a></li>
+                            <li><a href="#">Artikel Building</a></li>
+                            <li><a href="#">Artikel Offroad</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted d-none d-sm-block" href="https://wa.me/62895639068080" target="_blank">Tanya</a>
+
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section id="hero" class="hero section light-background" style="padding-bottom: 0px;">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="hero-content">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+                            <div class="content">
+                                <h1 class="hero-title mb-4">Bangun Tim Solid, Capai Target Bersama</h1>
+                                <p class="hero-subtitle mb-4">Kami merancang program outbound yang dinamis dan terukur
+                                    untuk memperkuat kerja sama, komunikasi, dan jiwa kepemimpinan tim Anda. Investasi
+                                    terbaik untuk aset terpenting perusahaan Anda.</p>
+
+                                <div class="hero-actions d-flex flex-wrap gap-3 mb-4">
+                                    <a href="https://wa.me/62895639068080" target="_blank"
+                                        class="btn btn-primary">Tanya</a>
+                                    <a href="#tickets" class="btn btn-outline">Harga</a>
+                                </div>
+
+                                <div class="hero-info d-flex flex-wrap align-items-center gap-4">
+                                    <div class="info-item d-flex align-items-center">
+                                        <i class="bi bi-clock me-2"></i>
+                                        <div>
+                                            <small class="text-muted">Open Daily</small>
+                                            <div class="fw-medium">11:00 - 17:00</div>
+                                        </div>
+                                    </div>
+                                    <div class="info-item d-flex align-items-center">
+                                        <i class="bi bi-geo-alt me-2"></i>
+                                        <div>
+                                            <small class="text-muted">Location</small>
+                                            <div class="fw-medium">Batu , Malang</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+                            <div class="hero-images">
+                                <div class="main-image">
+                                    <img src="assets/img/restaurant/outbound1.webp" alt="Signature Mediterranean Dish"
+                                        class="img-fluid">
+                                </div>
+                                <div class="floating-images">
+                                    <div class="floating-image floating-image-1">
+                                        <img src="assets/img/restaurant/outbound2.webp" alt="Grilled Seafood"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="floating-image floating-image-2">
+                                        <img src="assets/img/restaurant/outbound3.webp" alt="Mediterranean Dessert"
+                                            class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="about" class="about section">
+
+
+            <div class="container section-title" data-aos="fade-right">
+                <h2>Tentang Kami</h2>
+                <p>Kami merancang pengalaman outbound untuk membangun tim yang lebih solid, pemimpin yang lebih tangguh,
+                    dan kolaborasi yang lebih kuat.</p>
+            </div>
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="features-grid">
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="bi bi-people-fill"></i>
+                                </div>
+                                <h4>Sinergi Tim</h4>
+                                <p>Membangun komunikasi efektif, kepercayaan, dan kolaborasi solid melalui permainan
+                                    strategis yang dirancang untuk menyatukan visi tim Anda.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="bi bi-person-check-fill"></i>
+                                </div>
+                                <h4>Pengembangan Kepemimpinan</h4>
+                                <p>Mengasah kemampuan mengambil keputusan, memecahkan masalah, dan memimpin di bawah
+                                    tekanan dalam skenario yang menantang dan dinamis.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="bi bi-compass-fill"></i>
+                                </div>
+                                <h4>Petualangan & Energi Baru</h4>
+                                <p>Menyegarkan kembali semangat dan pikiran dengan aktivitas luar ruang yang seru,
+                                    menciptakan kenangan positif yang mempererat ikatan tim.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <section id="chefs" class="chefs section">
+
+                <div class="container section-title" data-aos="fade-up">
+                    <h2>Outbound</h2>
+                    <p>Bangun kekompakan tim melalui paket Rafting, Paintball, Offroad, dan Team Building.</p>
+                </div>
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                    <div class="main-chef-section" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="team-grid" data-aos="fade-up" data-aos-delay="400">
+                            <div class="row g-4">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="team-member" data-aos="flip-left" data-aos-delay="100">
+                                        <div class="member-photo">
+                                            <img src="assets/img/restaurant/foto 1.webp" class="img-fluid"
+                                                alt="Team Member">
+                                            <div class="overlay">
+                                                <div class="social-icons">
+                                                    <a href="#"><i class="bi bi-instagram"></i></a>
+                                                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member-info">
+                                            <h4>Team Building</h4>
+                                            <span class="position">KEKOMPAKAN</span>
+                                            <p>Perkuat kerja sama dan kekompakan tim melalui permainan seru dan
+                                                menantang</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="team-member" data-aos="flip-left" data-aos-delay="150">
+                                        <div class="member-photo">
+                                            <img src="assets/img/restaurant/foto 2.webp" class="img-fluid"
+                                                alt="Team Member">
+                                            <div class="overlay">
+                                                <div class="social-icons">
+                                                    <a href="#"><i class="bi bi-instagram"></i></a>
+                                                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member-info">
+                                            <h4>Rafting</h4>
+                                            <span class="position">TAKLUKKAN ARUS DERAS</span>
+                                            <p>Taklukkan jeram dan nikmati petualangan seru di atas air bersama tim Anda
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="team-member" data-aos="flip-left" data-aos-delay="200">
+                                        <div class="member-photo">
+                                            <img src="assets/img/restaurant/foto 3.webp" class="img-fluid"
+                                                alt="Team Member">
+                                            <div class="overlay">
+                                                <div class="social-icons">
+                                                    <a href="#"><i class="bi bi-instagram"></i></a>
+                                                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member-info">
+                                            <h4>Paintball</h4>
+                                            <span class="position">RASAKAN SENSASINYA</span>
+                                            <p>Rasakan sensasi pertempuran strategis yang memacu adrenalin dan kerja
+                                                sama tim.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="team-member" data-aos="flip-left" data-aos-delay="250">
+                                        <div class="member-photo">
+                                            <img src="assets/img/restaurant/foto 4.webp" class="img-fluid"
+                                                alt="Team Member">
+                                            <div class="overlay">
+                                                <div class="social-icons">
+                                                    <a href="#"><i class="bi bi-instagram"></i></a>
+                                                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="member-info">
+                                            <h4>Offroad</h4>
+                                            <span class="position">JELAJAHI MEDAN LIAR</span>
+                                            <p>Rasakan sensasi pertempuran strategis yang memacu adrenalin dan kerja
+                                                sama tim.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+            </section>
+            <section id="events" class="events section">
+
+                <div class="container" data-aos="fade-right" data-aos-delay="100">
+
+                    <div class="row align-items-center mb-5">
+                        <div class="col-lg-6" data-aos="fade-right" data-aos-delay="150">
+                            <div class="event-hero-content">
+                                <h2>Bangun Tim Juara Melalui Petualangan Tak Terlupakan</h2>
+                                <p>Bangun tim solid dengan team building outbound kami: rafting, paintball, dan offroad.
+                                    Tingkatkan kolaborasi, komunikasi, dan kepemimpinan.</p>
+                                <div class="event-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-number">500+</span>
+                                        <span class="stat-label">Acara Sukses</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">200</span>
+                                        <span class="stat-label">Klien Korporat</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                            <div class="event-hero-image">
+                                <img src="assets/img/restaurant/gambar 1.webp" alt="Event Space" class="img-fluid">
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-gallery-grid" data-aos="fade-up" data-aos-delay="200">
+                        <div class="row g-3">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="gallery-item" data-aos="zoom-out" data-aos-delay="250">
+                                    <img src="assets/img/restaurant/gambar 3.webp" alt="Corporate Event"
+                                        class="img-fluid">
+                                    <div class="gallery-overlay">
+                                        <span class="gallery-label">Team Building perusahaan</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="gallery-item main-gallery" data-aos="zoom-out" data-aos-delay="300">
+                                    <img src="assets/img/restaurant/gambar 2.webp" alt="Wedding Reception"
+                                        class="img-fluid">
+                                    <div class="gallery-overlay">
+                                        <span class="gallery-label">Team Building Kantor</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="gallery-item" data-aos="zoom-out" data-aos-delay="350">
+                                    <img src="assets/img/restaurant/gambar 4.webp" alt="Birthday Party"
+                                        class="img-fluid">
+                                    <div class="gallery-overlay">
+                                        <span class="gallery-label">offroad Perusahaan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+            </section>
+
+            <section id="tickets" class="tickets section light-background">
+
+                <div class="container section-title" data-aos="fade-up">
+                    <h2>Harga</h2>
+                    <p>Kami percaya setiap tim itu unik. Oleh karena itu, kami menawarkan paket yang fleksibel dan dapat
+                        disesuaikan dengan kebutuhan serta anggaran perusahaan Anda.</p>
+                </div>
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="ticket-card">
+                                <div class="ticket-header">
+                                    <h4 class="ticket-title">paintball</h4>
+                                    <p class="ticket-subtitle">Mulai Dari</p>
+                                    <div class="price-section">
+                                        <span class="currency">Rp</span>
+                                        <span class="amount">225.000</span>
+                                    </div>
+                                </div>
+                                <div class="ticket-body">
+                                    <ul class="benefits-list">
+                                        <li><i class="bi bi-check2"></i> Tiket masuk acara</li>
+                                        <li><i class="bi bi-check2"></i> Satu set perlengkapan selamat datang.</li>
+                                        <li><i class="bi bi-check2"></i> Makanan ringan dan minuman</li>
+                                        <li><i class="bi bi-check2"></i> Tempat duduk premium</li>
+                                        <li><i class="bi bi-check2"></i> Networking session</li>
+                                    </ul>
+                                    <a href="https://wa.me/62895639068080" target="_blank" class="ticket-btn">Beli</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="ticket-card premium">
+                                <div class="ticket-header">
+                                    <h4 class="ticket-title">Rafting</h4>
+                                    <p class="ticket-subtitle">Mulai Dari</p>
+                                    <div class="price-section">
+                                        <span class="currency">Rp</span>
+                                        <span class="amount">225.000</span>
+                                    </div>
+                                </div>
+                                <div class="ticket-body">
+                                    <ul class="benefits-list">
+                                        <li><i class="bi bi-check2"></i> Akses masuk ke seluruh area kegiatan.</li>
+                                        <li><i class="bi bi-check2"></i> Paket sambutan di awal acara.</li>
+                                        <li><i class="bi bi-check2"></i> Hidangan ringan untuk menemani aktivitas Anda.
+                                        </li>
+                                        <li><i class="bi bi-check2"></i> Tempat duduk yang nyaman di area premium.</li>
+                                        <li><i class="bi bi-check2"></i> Networking session</li>
+                                    </ul>
+                                    <a href="https://wa.me/62895639068080" target="_blank" class="ticket-btn">Beli</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="ticket-card">
+                                <div class="ticket-header">
+                                    <h4 class="ticket-title"> Offroad</h4>
+                                    <p class="ticket-subtitle">Mulai Dari</p>
+                                    <div class="price-section">
+                                        <span class="currency">Rp</span>
+                                        <span class="amount">100.000</span>
+                                    </div>
+                                </div>
+                                <div class="ticket-body">
+                                    <ul class="benefits-list">
+                                        <li><i class="bi bi-check2"></i> Tiket untuk memasuki acara.</li>
+                                        <li><i class="bi bi-check2"></i> Perlengkapan peserta saat kedatangan.</li>
+                                        <li><i class="bi bi-check2"></i> Kudapan dan minuman.</li>
+                                        <li><i class="bi bi-check2"></i> Akses ke tempat duduk.</li>
+                                        <li><i class="bi bi-check2"></i> Networking session</li>
+                                    </ul>
+                                    <a href="https://wa.me/62895639068080" target="_blank" class="ticket-btn">Beli</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                            <div class="ticket-card">
+                                <div class="ticket-header">
+                                    <h4 class="ticket-title">Team Building vip</h4>
+                                    <p class="ticket-subtitle">Mulai Dari</p>
+                                    <div class="price-section">
+                                        <span class="currency">Rp</span>
+                                        <span class="amount">150.000</span>
+                                    </div>
+                                </div>
+                                <div class="ticket-body">
+                                    <ul class="benefits-list">
+                                        <li><i class="bi bi-check2"></i> Fasilitas dasar</li>
+                                        <li><i class="bi bi-check2"></i> Akses ke tempat istirahat yang telah
+                                            disediakan.</li>
+                                        <li><i class="bi bi-check2"></i> Kesempatan untuk mengikuti sesi temu sapa.</li>
+                                        <li><i class="bi bi-check2"></i> Satu kenang-kenangan berupa merchandise.</li>
+                                        <li><i class="bi bi-check2"></i> Dukungan dari tim di lokasi acara.</li>
+                                    </ul>
+                                    <a href="https://wa.me/62895639068080" target="_blank" class="ticket-btn">Beli</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+            <section id="testimonials" class="testimonials section light-background">
+
+                <div class="container section-title" data-aos="fade-up">
+                    <h2>Testimonials</h2>
+                    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                </div>
+                <div class="container">
+
+                    <div class="testimonial-grid">
+
+                        <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-image">
+                                        <img src="assets/img/person/person-f-5.webp" class="img-fluid"
+                                            alt="Testimonial 1">
+                                    </div>
+                                    <div class="testimonial-meta">
+                                        <h3>Karina Sari</h3>
+                                        <h4>HRD Manager</h4>
+                                        <div class="company-logo">
+                                            <i class="bi bi-building"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-body">
+                                    <i class="bi bi-chat-quote-fill quote-icon"></i>
+                                    <p>Acaranya seru dan sangat berkesan! Fasilitatornya profesional dan berhasil
+                                        membangkitkan semangat baru dalam tim kami.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item featured" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-image">
+                                        <img src="assets/img/person/person-m-5.webp" class="img-fluid"
+                                            alt="Testimonial 2">
+                                    </div>
+                                    <div class="testimonial-meta">
+                                        <h3>Aditya Nugraha</h3>
+                                        <h4>Manajer Operasional</h4>
+                                        <div class="company-logo">
+                                            <i class="bi bi-buildings"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-body">
+                                    <i class="bi bi-chat-quote-fill quote-icon"></i>
+                                    <p>Komunikasi antar divisi jadi jauh lebih cair setelah outbound ini. Sesi
+                                        paintball-nya benar-benar melatih strategi tim. Recommended!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-image">
+                                        <img src="assets/img/person/person-f-6.webp" class="img-fluid"
+                                            alt="Testimonial 3">
+                                    </div>
+                                    <div class="testimonial-meta">
+                                        <h3>Isabella </h3>
+                                        <h4>Manager</h4>
+                                        <div class="company-logo">
+                                            <i class="bi bi-building-check"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-body">
+                                    <i class="bi bi-chat-quote-fill quote-icon"></i>
+                                    <p>Profesionalisme dan standar keamanan yang tinggi membuat kami sangat nyaman. Tim
+                                        bisa fokus pada tujuan tanpa rasa khawatir. </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-image">
+                                        <img src="assets/img/person/person-m-6.webp" class="img-fluid"
+                                            alt="Testimonial 4">
+                                    </div>
+                                    <div class="testimonial-meta">
+                                        <h3>Rian Santoso</h3>
+                                        <h4>Staf Pemasaran</h4>
+                                        <div class="company-logo">
+                                            <i class="bi bi-building-gear"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-body">
+                                    <i class="bi bi-chat-quote-fill quote-icon"></i>
+                                    <p>Pengalaman offroad yang tak terlupakan! Kegiatan ini sukses membuat kami lebih
+                                        akrab sebagai sebuah tim di luar kantor.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+            </section>
+
+            <section id="gallery" class="gallery section">
+
+                <div class="container section-title" data-aos="fade-up">
+                    <h2>Gallery</h2>
+                    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                </div>
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                    <div class="isotope-layout" data-default-filter="*" data-layout="masonry"
+                        data-sort="original-order">
+                        <ul class="gallery-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                            <li data-filter="*" class="filter-active">Semua</li>
+                            <li data-filter=".filter-food">paintball</li>
+                            <li data-filter=".filter-interior">Team Building</li>
+                            <li data-filter=".filter-events">Offroad</li>
+                            <li data-filter=".filter-staff">Rafting</li>
+                        </ul>
+                        <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-food">
+                                <div class="gallery-wrap">
+                                    <img src="assets/img/restaurant/paintball bawah1.webp" class="img-fluid"
+                                        alt="Appetizer Platter" loading="lazy">
+                                    <div class="gallery-info">
+                                        <h4>Gourmet Appetizer Selection</h4>
+                                        <p>Seasonal ingredients with artisan bread</p>
+                                        <div class="gallery-links">
+                                            <a href="assets/img/restaurant/paintball bawah1.webp" class="glightbox"
+                                                title="Gourmet Appetizer Selection"><i class="bi bi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-interior">
+                                <div class="gallery-wrap">
+                                    <img src="assets/img/restaurant/team building bawah1.webp" class="img-fluid"
+                                        alt="Restaurant Interior" loading="lazy">
+                                    <div class="gallery-info">
+                                        <h4>Main Dining Area</h4>
+                                        <p>Elegant atmosphere with natural lighting</p>
+                                        <div class="gallery-links">
+                                            <a href="assets/img/restaurant/team building bawah1.webp" class="glightbox"
+                                                title="Main Dining Area"><i class="bi bi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-food">
+                                <div class="gallery-wrap">
+                                    <img src="assets/img/restaurant/paintball bawah2.webp" class="img-fluid"
+                                        alt="Main Course" loading="lazy">
+                                    <div class="gallery-info">
+                                        <h4>Signature Main Course</h4>
+                                        <p>Chef's special with seasonal vegetables</p>
+                                        <div class="gallery-links">
+                                            <a href="assets/img/restaurant/paintball bawah2.webp" class="glightbox"
+                                                title="Signature Main Course"><i class="bi bi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-events">
+                                <div class="gallery-wrap">
+                                    <img src="assets/img/restaurant/offroad bawah 3.webp" class="img-fluid"
+                                        alt="Special Event" loading="lazy">
+                                    <div class="gallery-info">
+                                        <h4>Wine Tasting Evening</h4>
+                                        <p>Monthly culinary experience with paired wines</p>
+                                        <div class="gallery-links">
+                                            <a href="assets/img/restaurant/offroad bawah 3.webp" class="glightbox"
+                                                title="Wine Tasting Evening"><i class="bi bi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-staff">
+                                <div class="gallery-wrap">
+                                    <img src="assets/img/restaurant/rafting bawah1.webp" class="img-fluid"
+                                        alt="Chef Portrait" loading="lazy">
+                                    <div class="gallery-info">
+                                        <h4>Executive Chef</h4>
+                                        <p>Creating culinary masterpieces since 2010</p>
+                                        <div class="gallery-links">
+                                            <a href="assets/img/restaurant/rafting bawah1.webp" class="glightbox"
+                                                title="Executive Chef"><i class="bi bi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-interior">
+                                <div class="gallery-wrap">
+                                    <img src="assets/img/restaurant/team building bawah2.webp" class="img-fluid"
+                                        alt="Private Dining Room" loading="lazy">
+                                    <div class="gallery-info">
+                                        <h4>Private Dining Space</h4>
+                                        <p>Intimate setting for special occasions</p>
+                                        <div class="gallery-links">
+                                            <a href="assets/img/restaurant/team building bawah2.webp" class="glightbox"
+                                                title="Private Dining Space"><i class="bi bi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-food">
+                                <div class="gallery-wrap">
+                                    <img src="assets/img/restaurant/paintball bawah3.webp" class="img-fluid"
+                                        alt="Dessert Display" loading="lazy">
+                                    <div class="gallery-info">
+                                        <h4>Artisanal Dessert Plate</h4>
+                                        <p>Handcrafted sweet delicacies</p>
+                                        <div class="gallery-links">
+                                            <a href="assets/img/restaurant/paintball bawah3.webp" class="glightbox"
+                                                title="Artisanal Dessert Plate"><i class="bi bi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-events">
+                                <div class="gallery-wrap">
+                                    <img src="assets/img/restaurant/offroad bawah2.webp" class="img-fluid"
+                                        alt="Celebration Event" loading="lazy">
+                                    <div class="gallery-info">
+                                        <h4>Anniversary Celebration</h4>
+                                        <p>Custom events tailored to your special moments</p>
+                                        <div class="gallery-links">
+                                            <a href="assets/img/restaurant/offroad bawah2.webp" class="glightbox"
+                                                title="Anniversary Celebration"><i class="bi bi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-staff">
+                                <div class="gallery-wrap">
+                                    <img src="assets/img/restaurant/rafting bawah2.webp" class="img-fluid"
+                                        alt="Service Staff" loading="lazy">
+                                    <div class="gallery-info">
+                                        <h4>Our Culinary Team</h4>
+                                        <p>Passionate culinary artists at work</p>
+                                        <div class="gallery-links">
+                                            <a href="assets/img/restaurant/rafting bawah2.webp" class="glightbox"
+                                                title="Our Culinary Team"><i class="bi bi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section id="contact" class="contact section">
+                <div class="container section-title" data-aos="fade-up">
+                    <h2>Contact</h2>
+                    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="contact-info">
+                                <div class="contact-card">
+                                    <h3>Contact Information</h3>
+                                    <p>Feel free to reach out with any questions about the book, speaking engagements,
+                                        or media inquiries.</p>
+
+                                    <div class="contact-details">
+                                        <div class="contact-item">
+                                            <i class="bi bi-envelope"></i>
+                                            <div>
+                                                <h4>Email:</h4>
+                                                <p>author@example.com</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="contact-item">
+                                            <i class="bi bi-telephone"></i>
+                                            <div>
+                                                <h4>Phone:</h4>
+                                                <p>+1 (555) 123-4567</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="contact-item">
+                                            <i class="bi bi-geo-alt"></i>
+                                            <div>
+                                                <h4>Address:</h4>
+                                                <p>123 Book Street, Literary Lane</p>
+                                                <p>Wordsmith City, NY 10001</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="social-links">
+                                        <a href="#"><i class="bi bi-twitter"></i></a>
+                                        <a href="#"><i class="bi bi-facebook"></i></a>
+                                        <a href="#"><i class="bi bi-instagram"></i></a>
+                                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7">
+                            <div class="contact-form-wrapper">
+                                <form action="forms/contact.php" method="post" class="php-email-form">
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="name">Your Name</label>
+                                            <input type="text" name="name" class="form-control" id="name"
+                                                placeholder="John Doe" required="">
+                                        </div>
+                                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                                            <label for="email">Your Email</label>
+                                            <input type="email" class="form-control" name="email" id="email"
+                                                placeholder="john@example.com" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="subject">Subject</label>
+                                        <input type="text" class="form-control" name="subject" id="subject"
+                                            placeholder="I loved your book!" required="">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="message">Message</label>
+                                        <textarea class="form-control" name="message" rows="4"
+                                            placeholder="Your message here..." required=""></textarea>
+                                    </div>
+
+                                    <div class="my-3">
+                                        <div class="loading">Loading</div>
+                                        <div class="error-message"></div>
+                                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="submit">Send Message</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </main>
+
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="index.html" class="logo d-flex align-items-center">
+                        <span class="sitename">paketoutbound.biz.id</span>
+                    </a>
+                    <div class="footer-contact pt-3">
+                        <p>Batu , Malang</p>
+                        <p>Malang</p>
+                        <p class="mt-3"><strong>Phone:</strong> <span>0895-6390-68080</span></p>
+                        <p><strong>Email:</strong> <span>outboundmalang@gmail.com</span></p>
+                    </div>
+                    <div class="social-links d-flex mt-4">
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links ms-lg-auto">
+                    <h4>Link Berguna</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#chefs">Outbound</a></li>
+                        <li><a href="#events">Events</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Paket Outbound</h4>
+                    <ul>
+                        <li><a href="Paket-Outbound-Rafting.html">Paket Rafting</a></li>
+                        <li><a href="#">Paket Paintball</a></li>
+                        <li><a href="#">Paket Building</a></li>
+                        <li><a href="#">Paket Offroad</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Blog</h4>
+                    <ul>
+                        <li><a href="#">Artikel Rafting</a></li>
+                        <li><a href="#">Artikel Paintball</a></li>
+                        <li><a href="#">Artikel Building</a></li>
+                        <li><a href="#">Artikel Offroad</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename"></strong>paketoutbound.biz.id<span>All Rights
+                    Reserved</span></p>
+        </div>
+
+    </footer>
+
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <div id="preloader"></div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
